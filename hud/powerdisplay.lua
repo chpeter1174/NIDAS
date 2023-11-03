@@ -93,7 +93,7 @@ function powerDisplay.widget(glasses, data)
     end
 
     --Wireless EU addition
-    if data.wirelessEU > 10000000 then
+    --[[if data.wirelessEU > 10000000 then
         currentEU = data.wirelessEU
         maxEU = 2^1023
         data.wirelessMode = true
@@ -109,6 +109,7 @@ function powerDisplay.widget(glasses, data)
             energyData.animationCounter = 500
         end
     end
+    --]]
 
     --Update I/O
     if energyData.intervalCounter == 1 then
