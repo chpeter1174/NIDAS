@@ -90,26 +90,7 @@ function powerDisplay.widget(glasses, data)
     if percentage >= 0.999 then
         currentEU = maxEU
         percentage = 1.0
-    end
-
-    --Wireless EU addition
-    --[[if data.wirelessEU > 10000000 then
-        currentEU = data.wirelessEU
-        maxEU = 2^1023
-        data.wirelessMode = true
-        percentage = energyData.animationCounter / 500
-        if energyData.energyPerTick > 0 then
-            energyData.animationCounter = energyData.animationCounter + 1
-        else
-            energyData.animationCounter = energyData.animationCounter - 1
-        end
-        if energyData.animationCounter > 500 then
-            energyData.animationCounter = 1
-        elseif energyData.animationCounter < 0 then
-            energyData.animationCounter = 500
-        end
-    end
-    --]]
+    end  
 
     --Update I/O
     if energyData.intervalCounter == 1 then
